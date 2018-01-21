@@ -20,7 +20,7 @@ export class HttpTestComponent implements OnInit {
       license: string;
     }
 
-    this.http.get<Myinterface>('src/tsconfig.json').subscribe(data => {
+    this.http.get<Myinterface>('package.json').subscribe(data => {
       console.log(data);
       this.someData = data.license;
     });
